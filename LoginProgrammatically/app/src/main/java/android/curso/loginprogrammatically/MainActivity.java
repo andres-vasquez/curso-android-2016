@@ -13,14 +13,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     LinearLayout lyVertical;
-    TextView lblUsuario;
-    EditText txtUsuario;
-    TextView lblPassword;
-    EditText txtPassword;
-    LinearLayout lyHorizontal;
-    Button btnEnviar;
-    Button btnLimpiar;
-    TextView txtResultado;
+        TextView lblUsuario;
+        EditText txtUsuario;
+        TextView lblPassword;
+        EditText txtPassword;
+        LinearLayout lyHorizontal;
+            Button btnEnviar;
+            Button btnLimpiar;
+        TextView txtResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
