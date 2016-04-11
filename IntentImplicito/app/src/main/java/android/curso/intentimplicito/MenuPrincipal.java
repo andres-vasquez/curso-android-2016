@@ -1,13 +1,9 @@
 package android.curso.intentimplicito;
 
-import android.Manifest;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -20,7 +16,7 @@ import android.widget.TextView;
 
 import java.io.File;
 
-public class Menu extends AppCompatActivity {
+public class MenuPrincipal extends AppCompatActivity {
 
     private TextView titulo;
     private Button llamar;
@@ -32,7 +28,7 @@ public class Menu extends AppCompatActivity {
     private Button atras;
     private String mensaje_recibido;
     private ImageView mostrar_foto;
-    private static int TAKE_PICTURE = 1;
+    private static int TAKE_PICTURE = 101;
     private String ruta_foto;
 
     private String numero_tel="60507900";
@@ -99,7 +95,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"andres.vasquez.a@hotmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"andres.vasquez.a@hotmail.com","eclaros@ine.gob.bo"});
                 i.putExtra(Intent.EXTRA_SUBJECT,"Mensaje de prueba");
                 i.putExtra(Intent.EXTRA_TEXT,"Enviado por android");
                 startActivity(Intent.createChooser(i, "Seleccione la aplicacion de mail."));
@@ -124,16 +120,13 @@ public class Menu extends AppCompatActivity {
         });
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
     public void llamar(String numero)
     {
-        if (context.checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            Intent a = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numero_tel));
-            startActivity(a);
-        }
+        Intent a = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numero_tel));
+        startActivity(a);
     }
 
-
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         File file = new File(ruta_foto);

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         enviar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mensaje = nombre.getText().toString();
-                Intent ir = new Intent(getApplicationContext(), Menu.class);
+                Intent ir = new Intent(context, MenuPrincipal.class);
                 ir.putExtra("mensaje", mensaje);
                 startActivity(ir);
             }
@@ -45,13 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        /*menu.add(Menu.NONE, 1, Menu.NONE, "Opcion1")
-        .setIcon(android.R.drawable.ic_menu_camera);
-		menu.add(Menu.NONE, 2, Menu.NONE, "Opcion2")
-        .setIcon(android.R.drawable.ic_menu_compass);
-		menu.add(Menu.NONE, 3, Menu.NONE, "Opcion3")
-        .setIcon(android.R.drawable.ic_menu_agenda);*/
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        menu.add(Menu.NONE, 1, Menu.NONE, "Opcion1")
+                .setIcon(android.R.drawable.ic_menu_camera)
+                .setShowAsAction(1);
+        menu.add(Menu.NONE, 2, Menu.NONE, "Opcion2")
+                .setIcon(android.R.drawable.ic_menu_compass)
+                .setShowAsAction(1);
+        menu.add(Menu.NONE, 3, Menu.NONE, "Opcion3")
+                .setIcon(android.R.drawable.ic_menu_agenda)
+                .setShowAsAction(1);
+        menu.add(Menu.NONE, 4, Menu.NONE, "Opcion4");
         return true;
     }
 
@@ -69,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Menu3:
                 //Accion del Menu 3
                 Toast.makeText(context,"Menu 3",Toast.LENGTH_SHORT).show();
+                return true;
+            case 1:
+                Toast.makeText(context,"Click desde programada",Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
