@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new Item(1, "Icono", "Esta es la descripcion del icono", android.R.drawable.ic_menu_camera));
         items.add(new Item(1, "Play", "Esta es la descripcion de Play", android.R.drawable.ic_media_play));
         items.add(new Item(1, "Galeria", "Esta es la descripcion de Galeria", android.R.drawable.ic_menu_gallery));
+        items.add(new Item(1, "Nuevo", "Esta es la descripcion de Nuevo", android.R.drawable.ic_menu_more));
 
         //Instanciamos el adaptador
         AdaptadorItem adaptador=new AdaptadorItem(MainActivity.this, items);

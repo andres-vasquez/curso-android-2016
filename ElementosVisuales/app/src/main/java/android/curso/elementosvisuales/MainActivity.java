@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        toggle.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+            }
+        });
+
         checkbox=(CheckBox)findViewById(R.id.CheckBox);
         txtCheckbox=(TextView)findViewById(R.id.txtCheckBox);
 
