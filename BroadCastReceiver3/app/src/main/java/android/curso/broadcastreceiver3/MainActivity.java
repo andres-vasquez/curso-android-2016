@@ -1,17 +1,22 @@
-package android.curso.broadcastreceiver1;
+package android.curso.broadcastreceiver3;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button enviar;
+    private EditText tiempo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +25,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Log.i("Aplicación", "iniciada");
-        Toast.makeText(getApplicationContext(),"Aplicación iniciada", Toast.LENGTH_SHORT).show();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        enviar=(Button)findViewById(R.id.enviar);
+        tiempo=(EditText)findViewById(R.id.tiempo);
+
+        enviar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int i = Integer.parseInt(tiempo.getText().toString());
+                Intent intent = new Intent(getApplicationContext(), Alarma.class);
+
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0);
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+                        + (i * 1000), pendingIntent);
+
+                Toast.makeText(getApplicationContext(), "La alarma se iniciará en " + i + " segundos",
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }

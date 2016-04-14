@@ -20,7 +20,7 @@ public class Base_datos extends SQLiteOpenHelper
     //Método utilizado cuando se crea la base de datos.
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL("create table productos (id integer primary key autoincrement not null, producto varchar, precio double);");
+       db.execSQL("create table productos (id integer primary key autoincrement not null, producto varchar, precio double);");
         Log.d("Todos los tablas: ", "Se crearon las tablas");
     }
 

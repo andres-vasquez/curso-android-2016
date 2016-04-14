@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void reiniciarActividad() {
         Intent a=new Intent(getApplicationContext(),MainActivity.class);
+        finish();
         startActivity(a);
     }
 
@@ -123,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     values.put("precio","6.00");
                     String[] args=new String[]{""+view.getId()};
                     db.update("Productos",values, "id LIKE ?", args);
+                    db.update("Producots",values,"id LIKE "+view.getId(),null);
                     reiniciarActividad();
 
 
