@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                Toast mensaje=Toast.makeText(getApplicationContext(), "Notificación Toast", Toast.LENGTH_SHORT);
+                Toast mensaje=Toast.makeText(getApplicationContext(), "Notificación Toast", Toast.LENGTH_LONG);
                 mensaje.show();
             }
         });
