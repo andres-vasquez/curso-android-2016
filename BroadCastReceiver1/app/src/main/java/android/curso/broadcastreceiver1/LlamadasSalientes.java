@@ -12,7 +12,6 @@ public class LlamadasSalientes extends BroadcastReceiver
 {
     public void onReceive(Context context, Intent intent) {
 
-
         if (intent.getAction().equals(Intent.ACTION_NEW_OUTGOING_CALL))
         {
             Log.i("Estado", "Detectando llamada");
