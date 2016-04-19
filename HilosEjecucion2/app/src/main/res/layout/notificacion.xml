@@ -17,7 +17,8 @@
         <TextView android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/black"/>
 
         <ProgressBar android:id="@+id/barra_progreso"
             android:layout_width="match_parent"

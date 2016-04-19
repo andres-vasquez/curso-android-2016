@@ -13,7 +13,7 @@ import android.net.Uri;
  */
 public class MiProvider  extends ContentProvider
 {
-    private static final String uri = "content://com.example.content_proviers_ejemplo2/clientes";
+    private static final String uri = "content://android.curso.contentproviders2/clientes";
     public static final Uri CONTENT_URI = Uri.parse(uri);
 
     private Base_datos db;
@@ -28,8 +28,8 @@ public class MiProvider  extends ContentProvider
 
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI("com.example.content_proviers_ejemplo2", "clientes", CLIENTES);//Toda la tabla
-        uriMatcher.addURI("com.example.content_proviers_ejemplo2", "clientes/#", CLIENTES_ID); //Un id
+        uriMatcher.addURI("android.curso.contentproviders2", "clientes", CLIENTES);//Toda la tabla
+        uriMatcher.addURI("android.curso.contentproviders2", "clientes/#", CLIENTES_ID); //Un id
     }
 
 

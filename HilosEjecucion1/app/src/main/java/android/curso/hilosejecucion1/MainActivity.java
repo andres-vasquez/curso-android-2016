@@ -1,5 +1,7 @@
 package android.curso.hilosejecucion1;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -37,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Segunda accion lista", Toast.LENGTH_SHORT).show();
             }
         });
-        accion_larga();
-        //new Accion_larga().execute();
+        //accion_larga();
+        new Accion_larga().execute("Url de un pdf","Hola que ase","Soy Andres");
     }
 
-   private void accion_larga()
+   /*private void accion_larga()
 	{
 		try {
 			Thread.sleep(5000);
@@ -51,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
 			e.printStackTrace();
 		}
 	}
+    */
 
-	/*
-	private void accion_larga()
+	/*private void accion_larga()
 	{
 		Thread hilo=new Thread()
 		{
@@ -69,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		};
 		hilo.start();
-	}
+	}*/
 
-
+    /*
 	private void accion_larga()
 	{
 		Runnable proceso=new Runnable()
@@ -88,11 +90,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		};
 		new Thread(proceso).start();
-	}
+	}*/
 
-	*/
-
-    /*private ProgressDialog Dialog;
+    private ProgressDialog Dialog;
     class Accion_larga extends AsyncTask<String, String, String>
     {
         protected void onPreExecute()
@@ -100,14 +100,17 @@ public class MainActivity extends AppCompatActivity {
             super.onPreExecute();
             Dialog = new ProgressDialog(MainActivity.this);
             Dialog.setMessage("Realizando acción larga. Espere por favor...");
-            Dialog.setIndeterminate(false);
+            //Dialog.setIndeterminate(false);
+            Dialog.setMax(100);
+            Dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             Dialog.show();
+            Dialog.setProgress(30);
         }
         protected String doInBackground(String... args)
         {
             try {
                 Thread.sleep(9000);
-                Log.i("Estado", "Terminada");
+                Log.i("Estado", "Terminada "+args[0]);
 
             } catch (InterruptedException e)
             {
@@ -121,5 +124,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Tarea terminada", Toast.LENGTH_SHORT).show();
             Dialog.dismiss();
         }
-    }*/
+    }
 }

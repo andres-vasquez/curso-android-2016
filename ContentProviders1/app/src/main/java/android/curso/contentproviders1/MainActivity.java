@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 int contador=0;
                 while (cursor.moveToNext())
                 {
-                    if(contador<=10)
+                    if(contador<=200)
                     {
                         item = new HashMap<String,String>();
                         item.put( "linea1", cursor.getString(cursor
