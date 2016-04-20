@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 Clientes.COLUMNA_DEUDA};
 
         //Uri clientesUri =  MiProvider.CONTENT_URI;
-        Uri clientesUri =  Uri.parse("content://android.curso.contentproviders2/clientes");
-        //Uri clientesUri =  Uri.parse("content://android.curso.contentproviders2/clientes/2");
+        //Uri clientesUri =  Uri.parse("content://android.curso.contentproviders2/clientes");
+        Uri clientesUri =  Uri.parse("content://android.curso.contentproviders2/clientes/2");
 
         ContentResolver cr = getContentResolver();
 
@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
         values.put(Clientes.COLUMNA_EMAIL, "andres.vasquez.a@hotmail.com");
         cr.insert(MiProvider.CONTENT_URI, values);
 
-        ContentValues values1 = new ContentValues();
+        /*ContentValues values1 = new ContentValues();
         values1.put(Clientes.COLUMNA_NOMBRE, "Andres13");
         String[] args=new String[]{"Andres"};
-        cr.update(clientesUri, values1, Clientes.COLUMNA_NOMBRE+"=?", args);
+        cr.update(clientesUri, values1, Clientes.COLUMNA_NOMBRE+"=?", args);*/
     }
 
 }
