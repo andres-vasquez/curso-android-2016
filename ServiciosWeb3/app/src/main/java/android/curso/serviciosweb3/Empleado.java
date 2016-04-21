@@ -4,6 +4,7 @@ public class Empleado {
 	String nombres;
 	String departamento;
 	String sueldo;
+
 	public String getNombres() {
 		return nombres;
 	}

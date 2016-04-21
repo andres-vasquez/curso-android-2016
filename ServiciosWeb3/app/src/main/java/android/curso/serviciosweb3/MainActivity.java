@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         txtResultado=(TextView)findViewById(R.id.resultado);
 
         CargarXml tarea = new CargarXml();
-        tarea.execute("http://dreamyourapps.com/webservices/xml/servicios.php");
+        //tarea.execute("http://dreamyourapps.com/webservices/xml/servicios.php");
+        tarea.execute("http://172.20.10.3:8888/webservices/xml/servicios.php");
+
     }
 
     private class CargarXml extends AsyncTask<String,Integer,Boolean> {
