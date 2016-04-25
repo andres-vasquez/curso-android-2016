@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Librerias</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_titulo">Android Libs</string>
+    <string name="menu_gson">GSON</string>
+    <string name="menu_orm">ORM Lite</string>
+    <string name="menu_universal_image">Universal Image Loader</string>
+    <string name="menu_iconis">Android Iconics</string>
+    <string name="menu_drawer">Material Drawer</string>
+    <string name="menu_image_slider">Image Slider</string>
+    <string name="menu_zxing">Zxing</string>
+
+    <string name="item_uno">Menu Uno</string>
+    <string name="item_dos">Menu Dos</string>
+    <string name="item_tres">Menu Tres</string>
+    <string name="item_cuatro">Menu Cuatro</string>
+
+
+
+    <string name="title_activity_activity_gson">ActivityGson</string>
+    <string name="title_activity_activity_orm">ActivityOrm</string>
+    <string name="title_activity_activity_universal_image">ActivityUniversalImage</string>
+    <string name="title_activity_activity_iconics">ActivityIconics</string>
+    <string name="title_activity_activity_material">ActivityMaterial</string>
+    <string name="title_activity_activity_animations">ActivityAnimations</string>
+    <string name="title_activity_activity_slider">ActivitySlider</string>
+    <string name="title_activity_activity_zxing">ActivityZxing</string>
+</resources>

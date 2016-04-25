@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "android.curso.librerias"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //Librerias de Google
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+
+    //Iconos
+    compile 'com.mikepenz:iconics:1.2.0@aar'
+    compile('com.mikepenz:aboutlibraries:5.0.6@aar') {
+        transitive = true
+    }
+    compile('com.mikepenz:materialdrawer:3.0.9@aar') {
+        transitive = true
+    }
+    compile 'com.facebook.rebound:rebound:0.3.6'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+
+    compile 'com.marvinlabs:android-slideshow-widget-picasso-plugin:0.4.+@aar'
+    compile 'com.marvinlabs:android-slideshow-widget:0.4.+@aar'
+
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.0.9@aar'
+
+    compile 'me.dm7.barcodescanner:zxing:1.8.3'
+}
