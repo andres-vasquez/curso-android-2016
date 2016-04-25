@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="android.curso.fragment1.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!-- El primero es la lista (no dinamico) -->
+    <fragment
+        android:id="@+id/items"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="android.curso.fragments1.Items"
+        tools:showIn="@layout/activity_main"/>
+
+    <!-- El segundo es el container (vacio) -->
+    <FrameLayout
+        android:id="@+id/detalles"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

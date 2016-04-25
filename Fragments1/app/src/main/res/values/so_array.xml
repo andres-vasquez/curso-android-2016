@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="so_array">
+        <item>ANDROID</item>
+        <item>iOS</item>
+        <item>WINDOWS PHONE</item>
+    </string-array>
+    <string-array name="desc">
+        <item>Android es un sistema operativo basado en el kernel de Linux diseñado principalmente para dispositivos móviles con pantalla táctil, como teléfonos inteligentes o tabletas, inicialmente desarrollado por Android, Inc. Google respaldó económicamente y más tarde compró esta empresa en 2005. Android fue presentado en 2007 junto la fundación del Open Handset Alliance: un consorcio de compañías de hardware, software y telecomunicaciones para avanzar en los estándares abiertos de los dispositivos móviles. El primer móvil con el sistema operativo Android fue el HTC Dream y se vendió en octubre de 2008.</item>
+        <item>iOS es un sistema operativo móvil de la empresa Apple Inc. Originalmente desarrollado para el iPhone (iPhone OS) siendo después usado en dispositivos como el iPod Touch iPad y el Apple TV. Apple Inc. no permite la instalación de iOS en hardware de terceros. Tenía el 26 por ciento de cuota de mercado de sistemas operativos móviles vendidos en el último cuatrimestre de 2010, detrás de Google Android y Nokia Symbian.1 En enero de 2014, el 78% de los dispositivos iOS (iPad, iPod y iPhone) poseen iOS 7.</item>
+        <item>Windows Phone 8 es la segunda generación del sistema operativo para móviles Windows Phone. Su versión RTM (Para fabricantes) fue lanzada el 14 de septiembre de 2012 y fue liberado a los consumidores el 29 de octubre de 2012.</item>
+    </string-array>
+</resources>
