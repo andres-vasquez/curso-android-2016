@@ -20,7 +20,8 @@ public class SOAPClient extends AsyncTask<String, Void, String>{
 	public static String DATO="CURSO ANDROID";
 
 	Receiver receiver;
-	public SOAPClient(Receiver receiver){
+	public SOAPClient(Receiver receiver)
+	{
 		this.receiver = receiver;
 	}
 	

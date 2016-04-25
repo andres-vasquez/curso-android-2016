@@ -85,7 +85,8 @@ public class MenuPrincipal extends AppCompatActivity {
         web.setText("ir a la página del INE");
         web.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent a = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ine.gob.bo"));
+                //Intent a = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ine.gob.bo"));
+                Intent a = new Intent(Intent.ACTION_VIEW, Uri.parse("http://pendientedemigracion.ucm.es/info/tecnomovil/documentos/android.pdf"));
                 startActivity(a);
             }
         });
