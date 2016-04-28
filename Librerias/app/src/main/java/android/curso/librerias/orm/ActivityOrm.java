@@ -154,6 +154,7 @@ public class ActivityOrm extends AppCompatActivity implements ListaAdapter.Callb
         try {
             dao = getHelper().getPersonaDao();
             QueryBuilder queryBuilder = dao.queryBuilder();
+            //queryBuilder.where().eq("edad","25");
             List<Persona> personas = dao.query(queryBuilder.prepare());
             if (!personas.isEmpty())
             {

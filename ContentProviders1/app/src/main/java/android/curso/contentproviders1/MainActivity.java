@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity {
         sms.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 list.clear();
-
+                String[] args=new String[]{"77700"};
                 Uri mensajes = Uri.parse("content://sms");
                 Cursor cursor1 = MainActivity.this.getContentResolver().query(mensajes,
                         new String[] { "_id", "thread_id", "address", "person", "date",
-                                "body", "type" }, null, null, null);
+                                "body", "type" }, "address=?", args, null);
 
                 String[] columnas = new String[] { "address", "person", "date", "body",
                         "type" };
@@ -165,12 +165,11 @@ public class MainActivity extends AppCompatActivity {
 
         busqueda.addTextChangedListener(new TextWatcher() {
 
-            public void onTextChanged(CharSequence s, int start, int before,int count)
-            {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 sa.getFilter().filter(s.toString());
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count,	int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 

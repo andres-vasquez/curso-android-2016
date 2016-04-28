@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText producto;
     private EditText precio;
     private Button guardar;
+    private Button btnPrecio;
     private TableLayout tabla;
     private TableRow fila;
     TableRow.LayoutParams layoutFila;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         producto=(EditText)findViewById(R.id.producto);
         precio=(EditText)findViewById(R.id.precio);
         guardar=(Button)findViewById(R.id.enviar);
+        btnPrecio=(Button)findViewById(R.id.btnPrecio);
         tabla=(TableLayout)findViewById(R.id.tabla);
 
         layoutFila = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
@@ -74,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
                 agregarFilas(productos_existentes.getString(1),productos_existentes.getString(2),productos_existentes.getString(0));
             }while(productos_existentes.moveToNext());
         }
+
+        btnPrecio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent escaner=new Intent(context,Escanner2.class);
+                startActivity(escaner);
+            }
+        });
 
     }
 

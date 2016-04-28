@@ -52,7 +52,7 @@ public class ActivityIconics extends AppCompatActivity {
 
         //Definimos las caracteristicas de la imagen
         Drawable drawable=new IconicsDrawable(this)
-                .icon(FontAwesome.Icon.faw_android)
+                .icon(FontAwesome.Icon.faw_money)
                 .color(getResources().getColor(R.color.colorAccent))
                 .sizeDp(24);
          imgUno.setImageDrawable(drawable);
@@ -69,7 +69,7 @@ public class ActivityIconics extends AppCompatActivity {
                 .sizeDp(24));
 
         imgCuatro.setImageDrawable(new IconicsDrawable(this)
-                .icon(GoogleMaterial.Icon.gmd_map)
+                .icon(GoogleMaterial.Icon.gmd_attachment)
                 .color(Color.RED)
                 .sizeDp(24));
 

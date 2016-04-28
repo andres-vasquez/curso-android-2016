@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Almacenamiento3</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_escanner">Escanner</string>
+    <string name="title_activity_escanner2">Escanner2</string>
 </resources>
